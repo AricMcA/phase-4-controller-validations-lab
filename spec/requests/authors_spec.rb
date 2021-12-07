@@ -39,7 +39,7 @@ RSpec.describe "Authors", type: :request do
   
       it 'returns the error messages' do
         post '/authors', params: author_params
-  
+        # byebug
         expect(response.body).to include_json({
           errors: a_kind_of(Hash)
         })
